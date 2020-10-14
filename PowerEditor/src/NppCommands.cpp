@@ -483,7 +483,7 @@ void Notepad_plus::command(int id)
 			if (nppGui._searchEngineChoice == nppGui.se_custom)
 			{
 				url = nppGui._searchEngineCustom;
-				remove_if(url.begin(), url.end(), _istspace);
+				url.erase(remove_if(url.begin(), url.end(), _istspace), url.end()); // remove all spaces
 
 				auto httpPos = url.find(TEXT("http://"));
 				auto httpsPos = url.find(TEXT("https://"));
@@ -3183,6 +3183,8 @@ void Notepad_plus::command(int id)
         case IDM_LANG_SPICE :
         case IDM_LANG_TXT2TAGS :
         case IDM_LANG_VISUALPROLOG:
+		case IDM_LANG_EDIFACT:
+		case IDM_LANG_X12:
 		case IDM_LANG_USER :
 		{
             setLanguage(menuID2LangType(id));

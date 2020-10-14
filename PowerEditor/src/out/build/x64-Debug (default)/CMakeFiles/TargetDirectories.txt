@@ -1,0 +1,3 @@
+C:/Source/Repos/notepad-plus-plus/PowerEditor/src/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Source/Repos/notepad-plus-plus/PowerEditor/src/out/build/x64-Debug (default)/CMakeFiles/notepad++.dir
+C:/Source/Repos/notepad-plus-plus/PowerEditor/src/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

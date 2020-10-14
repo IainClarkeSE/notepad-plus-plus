@@ -726,6 +726,7 @@ BEGIN
         MENUITEM "CSS",                     IDM_LANG_CSS
         MENUITEM "D",                       IDM_LANG_D
         MENUITEM "Diff",                    IDM_LANG_DIFF
+        MENUITEM "EDIFACT",                 IDM_LANG_EDIFACT
         MENUITEM "Erlang",                  IDM_LANG_ERLANG
         MENUITEM "ESCRIPT",                 IDM_LANG_ESCRIPT
         MENUITEM "Forth",                   IDM_LANG_FORTH
@@ -785,6 +786,7 @@ BEGIN
         MENUITEM "VHDL",                    IDM_LANG_VHDL
         MENUITEM "Visual Basic",            IDM_LANG_VB
         MENUITEM "Visual Prolog",           IDM_LANG_VISUALPROLOG
+        MENUITEM "X12",                     IDM_LANG_X12
         MENUITEM "XML",                     IDM_LANG_XML
         MENUITEM "YAML",                    IDM_LANG_YAML
         MENUITEM SEPARATOR
@@ -830,6 +832,7 @@ BEGIN
     END
     POPUP "E"
     BEGIN
+        MENUITEM "EDIFACT",               IDM_LANG_EDIFACT
         MENUITEM "Erlang",                IDM_LANG_ERLANG
         MENUITEM "ESCRIPT",               IDM_LANG_ESCRIPT
     END
@@ -929,7 +932,11 @@ BEGIN
         MENUITEM "VHDL",                  IDM_LANG_VHDL
         MENUITEM "Verilog",               IDM_LANG_VERILOG
     END
-    MENUITEM "XML",                       IDM_LANG_XML
+    POPUP "X"
+    BEGIN
+        MENUITEM "X12",                   IDM_LANG_X12
+        MENUITEM "XML",                   IDM_LANG_XML
+    END
     MENUITEM "YAML",                      IDM_LANG_YAML
     MENUITEM SEPARATOR
     POPUP "User Defined Language"

@@ -360,6 +360,7 @@ const int FONTSTYLE_NONE = 0;
 const int FONTSTYLE_BOLD = 1;
 const int FONTSTYLE_ITALIC = 2;
 const int FONTSTYLE_UNDERLINE = 4;
+const int FONTSTYLE_EOLFILLED = 8;
 
 const int STYLE_NOT_USED = -1;
 

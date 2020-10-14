@@ -6509,6 +6509,12 @@ int NppParameters::langTypeToCommandID(LangType lt) const
 		case L_VISUALPROLOG:
 			id = IDM_LANG_VISUALPROLOG; break;
 
+		case L_EDIFACT:
+			id = IDM_LANG_EDIFACT; break;
+
+		case L_X12:
+			id = IDM_LANG_X12; break;
+
 		case L_SEARCHRESULT :
 			id = -1;	break;
 

@@ -964,6 +964,14 @@ protected:
 		setLexer(SCLEX_VISUALPROLOG, L_VISUALPROLOG, LIST_0 | LIST_1 | LIST_2 | LIST_3);
 	}
 
+	void setEDIFACTLexer() {
+		setLexer(SCLEX_EDIFACT, L_EDIFACT, LIST_NONE);
+	};
+
+	void setX12Lexer() {
+		setLexer(SCLEX_X12, L_X12, LIST_NONE);
+	};
+
     //--------------------
 
 	void setSearchResultLexer() {

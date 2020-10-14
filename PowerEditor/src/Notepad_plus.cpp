@@ -3408,6 +3408,10 @@ LangType Notepad_plus::menuID2LangType(int cmdID)
             return L_TXT2TAGS;
         case IDM_LANG_VISUALPROLOG:
             return L_VISUALPROLOG;
+		case IDM_LANG_EDIFACT:
+			return L_EDIFACT;
+		case IDM_LANG_X12:
+			return L_X12;
 		case IDM_LANG_USER :
             return L_USER;
 		default:

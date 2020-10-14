@@ -376,6 +376,16 @@
             <WordsStyle name="DELETED" styleID="5" fgColor="808040" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="ADDED" styleID="6" fgColor="0080FF" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
+        <LexerType name="edifact" desc="EDIFACT" ext="">
+            <WordsStyle name="SEGMENTSTART" styleID="1" fgColor="000080" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEGMENTEND" styleID="2" fgColor="0000ff" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEP_ELEMENT" styleID="3" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEP_COMPOSITE" styleID="4" fgColor="004000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEP_RELEASE" styleID="5" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="UNA" styleID="6" fgColor="808080" bgColor="FFFFFF" fontName="" fontStyle="3" fontSize="" />
+            <WordsStyle name="UNH" styleID="7" fgColor="000080" bgColor="FFFFFF" fontName="" fontStyle="1" fontSize="" />
+            <WordsStyle name="BADSEGMENT" styleID="8" fgColor="FFFFFF" bgColor="800000" fontName="" fontStyle="8" fontSize="" />
+        </LexerType>
         <LexerType name="erlang" desc="Erlang" ext="">
             <WordsStyle name="DEFAULT STYLE" styleID="0" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="DEFAULT COMMENT" styleID="1" fgColor="d00000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
@@ -1332,6 +1342,16 @@
             <WordsStyle name="STD PACKAGE" styleID="12" fgColor="800000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" keywordClass="type3" />
             <WordsStyle name="STD TYPE" styleID="13" fgColor="8000FF" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" keywordClass="type4" />
             <WordsStyle name="USER DEFINE" styleID="14" fgColor="B5E71F" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" keywordClass="type5" />
+        </LexerType>
+        <LexerType name="x12" desc="X12" ext="">
+            <WordsStyle name="ENVELOPE" styleID="2" fgColor="0000C0" bgColor="FFFFFF" fontName="" fontStyle="1" fontSize="" />
+            <WordsStyle name="FUNCTIONGROUP" styleID="3" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="1" fontSize="" />
+            <WordsStyle name="TRANSACTIONSET" styleID="4" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="2" fontSize="" />
+            <WordsStyle name="SEGMENTHEADER" styleID="5" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEGMENTEND" styleID="6" fgColor="0000FF" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEP_ELEMENT" styleID="7" fgColor="008080" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="SEP_SUBELEMENT" styleID="8" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" />
+            <WordsStyle name="BADSEGMENT" styleID="1" fgColor="FFFFFF" bgColor="800000" fontName="" fontStyle="8" fontSize="" />
         </LexerType>
         <LexerType name="xml" desc="XML" ext="">
             <WordsStyle name="XMLSTART" styleID="12" fgColor="FF0000" bgColor="FFFF00" fontName="" fontStyle="0" fontSize="" />

@@ -166,6 +166,8 @@ LanguageName ScintillaEditView::langNames[L_EXTERNAL+1] = {
 {TEXT("spice"),			TEXT("Spice"),				TEXT("spice file"),										L_SPICE,		SCLEX_SPICE},
 {TEXT("txt2tags"),		TEXT("txt2tags"),			TEXT("txt2tags file"),									L_TXT2TAGS,		SCLEX_TXT2TAGS},
 {TEXT("visualprolog"),	TEXT("Visual Prolog"),		TEXT("Visual Prolog file"),								L_VISUALPROLOG,	SCLEX_VISUALPROLOG},
+{TEXT("edifact"),		TEXT("EDIFACT"),			TEXT("EDIFACT file"),									L_EDIFACT,		SCLEX_EDIFACT},
+{TEXT("x12"),			TEXT("X12"),				TEXT("X12 file"),										L_X12,			SCLEX_X12},
 {TEXT("ext"),			TEXT("External"),			TEXT("External"),										L_EXTERNAL,		SCLEX_NULL}
 };
 
@@ -564,10 +566,11 @@ void ScintillaEditView::setSpecialStyle(const Style & styleToSet)
 	int fontStyle = styleToSet._fontStyle;
     if (fontStyle != STYLE_NOT_USED)
     {
-        execute(SCI_STYLESETBOLD,		styleID, fontStyle & FONTSTYLE_BOLD);
-        execute(SCI_STYLESETITALIC,		styleID, fontStyle & FONTSTYLE_ITALIC);
-        execute(SCI_STYLESETUNDERLINE,	styleID, fontStyle & FONTSTYLE_UNDERLINE);
-    }
+        execute(SCI_STYLESETBOLD,		styleID, (fontStyle & FONTSTYLE_BOLD) ? 1 : 0);
+        execute(SCI_STYLESETITALIC,		styleID, (fontStyle & FONTSTYLE_ITALIC) ? 1 : 0);
+        execute(SCI_STYLESETUNDERLINE,	styleID, (fontStyle & FONTSTYLE_UNDERLINE) ? 1 : 0);
+		execute(SCI_STYLESETEOLFILLED,  styleID, (fontStyle & FONTSTYLE_EOLFILLED) ? 1 : 0);
+	}
 
 	if (styleToSet._fontSize > 0)
 		execute(SCI_STYLESETSIZE, styleID, styleToSet._fontSize);
@@ -1745,6 +1748,12 @@ void ScintillaEditView::defineDocType(LangType typeDoc)
 
 		case L_VISUALPROLOG:
 			setVisualPrologLexer(); break;
+
+		case L_EDIFACT:
+			setEDIFACTLexer(); break;
+
+		case L_X12:
+			setX12Lexer(); break;
 
 		case L_TEXT :
 		default :
